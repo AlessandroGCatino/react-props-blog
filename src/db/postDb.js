@@ -2,16 +2,16 @@ export const posts = [
     {
       id: 1,
       title: "Titolo del Post",
-      image: '',
+      image: 'https://picsum.photos/id/400/600/400',
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
-      tags: ["html", "css"],
+      tags: ["html", "css", "python"],
       published: true,
     },
     {
       id: 2,
       title: "Titolo del Post",
-      image: '',
+      image: 'https://picsum.photos/600/400',
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
       tags: ["js", "css"],
@@ -29,7 +29,7 @@ export const posts = [
     {
       id: 4,
       title: "Titolo del Post",
-      image: '',
+      image: 'https://picsum.photos/id/200/600/400',
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
       tags: ["html"],

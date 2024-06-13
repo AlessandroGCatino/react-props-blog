@@ -1,20 +1,33 @@
-import styleCard from './main/main.module.css';
+import styleCard from './main/main.module.scss';
 
-const Card = () => {
+const tagColors = {
+    'html': styleCard.red,
+    'css': styleCard.blue,
+    'js': styleCard.sand,
+    'php': styleCard.purple
+}
+
+const Card = ({title, image, content, tags, published}) => {
 
     return (
         <div className={styleCard.card}>
             <figure className={styleCard.cardImage}>
-                <img src="/cardimage.png" alt="screen dimension"/>
+                <img src={image || "/cardimage.png"} alt={title || "pic dimension placeholder"}/>
             </figure>
             <div className={styleCard.cardDesc}>
-                <h3>Titolo</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, beatae atque debitis dolor perspiciatis qui provident quidem id tempora laboriosam, saepe, veniam quas a explicabo autem dolores. Debitis repudiandae esse iusto tempora, iure consequatur quod nesciunt illum molestiae ea. A.</p>
-                <button className={styleCard.readMore}>leggi di più</button>
+                <h3>{title || "Title Placeholder"}</h3>
+                <p>{content || "Content Placeholder"}</p>
+                <div className={styleCard.tags}>
+                    {tags && tags.map((tag, index) => 
+                        <span key={`tag${title}${index}`} className={tagColors[tag] || styleCard.default}>
+                            {tag}
+                        </span>
+                    )}
+                </div>
+                {/* <button className={styleCard.readMore}>leggi di più</button> */}
             </div>
         </div>
     )
-
 }
 
 export default Card;
