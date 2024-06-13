@@ -21,14 +21,13 @@ const Header = () => {
     return (
         <div className={style.headerBackground}>
             <h1>Il mio blog</h1>
-            <div>
-                <ul>
-                    {
-                        allTags.map((tag, index) => 
-                        <li key={`secList${index}`} className={tagColors[tag] || tagStyles.default}>{tag}</li>)
-                    }
-                </ul>
-            </div>
+            <ul>
+                {
+                    allTags.map((tag, index) => 
+                    <li key={`secList${index}`} className={tagColors[tag] || tagStyles.default}>{tag}</li>)
+                }
+            </ul>
+
         </div>
         
     )
